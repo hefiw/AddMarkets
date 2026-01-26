@@ -1,0 +1,43 @@
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: start;
+}
+
+.items-end {
+  align-items: end;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.content-start {
+  justify-content: start;
+}
+
+.content-end {
+  justify-content: end;
+}
+
+.content-between {
+  justify-content: space-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.bord-solid {
+    border-style: solid;
+}
+
+.ff-Montserrat {
+    font-family: $ff-montserrat;
+}

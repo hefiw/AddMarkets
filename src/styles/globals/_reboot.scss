@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+*:focus,
+*:focus-visible {
+  outline: none;
+}
+
+body {
+  font-family: $ff-montserrat;
+  font-style: normal;
+  font-weight: 400;
+  color: $color-black;
+  margin: 0;
+  padding: 0;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  gap: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}

@@ -1,0 +1,13 @@
+.link {
+    color: $color-black;
+
+    &--orange {
+        color: $color-orange;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        color: $color-blue;
+    }
+}
