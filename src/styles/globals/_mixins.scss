@@ -10,6 +10,12 @@
   }
 }
 
+@mixin vp-885 {
+  @media (max-width: 885px) {
+    @content;
+  }
+}
+
 @mixin vp-768 {
   @media (max-width: $vp-tablet-v) {
     @content;

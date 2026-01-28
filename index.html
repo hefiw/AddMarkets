@@ -9,8 +9,19 @@
 </head>
 
 <body>
-  <header class="ff-Montserrat fw-500 pt-32">
-    <div class="container flex items-center content-between">
+  <header class="pos-fix top-0 right-0 left-0 maxw-100vw ff-Montserrat fw-500 pt-32 z-h">
+    <div class="container flex items-center content-between gap-16">
+      <button type="button" class="w-34px h-34px svg__mobile-btn mobile-vision">
+        <!-- openclass: mobile-menu--open -->
+        <svg width="9" height="7" class="w-34px h-34px">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M3 17C3 24.713 9.28698 31 17 31C24.8594 31 31 24.7197 31 17C31 9.28698 24.713 3 17 3C9.28698 3 3 9.28698 3 17ZM2 17C2 25.2653 8.73469 32 17 32C25.4184 32 32 25.2653 32 17C32 8.7347 25.2653 2 17 2C8.73469 2 2 8.7347 2 17Z"
+            fill="currentColor" />
+          <rect class="mobile-menu-tr" x="11.5" y="16" width="10.9091" height="1.4" rx="0.4" fill="currentColor" />
+          <rect class="mobile-menu-mr" x="11.5" y="16" width="10.9091" height="1.4" rx="0.4" fill="currentColor" />
+          <rect class="mobile-menu-br" x="11.5" y="16" width="10.9091" height="1.4" rx="0.4" fill="currentColor" />
+        </svg>
+      </button>
       <a href="#" class="svg__logo">
         <svg width="132" height="35" viewBox="0 0 132 35" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -50,14 +61,15 @@
             fill="#303030" class="svg__logo--g" />
         </svg>
       </a>
-      <div class="flex items-center gap-32">
-        <nav>
-          <ul class="flex gap-32">
+      <div class="flex items-center gap-32 mobile-hidden">
+        <nav class="">
+          <ul class="flex gap-16">
             <li>
               <a href="#" class="link link--orange t2">Маркетплейсы</a>
             </li>
             <li>
               <button type="button" class="link flex items-center gap-4 t2">
+                <!-- openclass: link--active -->
                 <span>Контент</span>
                 <svg width="9" height="7">
                   <use xlink:href="./src/assets/sprite.svg#IArrowBottom"></use>
@@ -77,16 +89,50 @@
             </li>
           </ul>
         </nav>
-        <section class="flex items-center gap-28">
+        <section class="flex items-center gap-16">
           <button type="button" class="btn-small t3">
             ОБРАТНЫЙ ЗВОНОК
           </button>
           <a href="tel:+74993446091" class="t2">+7 (499) 344 60 91</a>
         </section>
       </div>
+      <button type="button" class="w-34px h-34px svg__mobile-btn mobile-vision">
+        <svg width="9" height="7" class="w-34px h-34px">
+          <use xlink:href="./src/assets/sprite.svg#IPost"></use>
+        </svg>
+      </button>
     </div>
   </header>
-  <main></main>
+
+  <main>
+    <section class="firstscreen w-100% h-100vh ff-Montserrat">
+      <svg class="w-100% mobile-hidden pos-abs z-bg" viewBox="0 0 1920 997" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M-19 -15L374.817 378.876C446.93 451 544.737 491.519 646.721 491.519H1334.31C1436.29 491.519 1534.1 532.038 1606.21 604.162L1921 919"
+          stroke="white" stroke-width="220" stroke-linejoin="round" />
+      </svg>
+      <div class="container pos-rel z-1 flex items-center pt-70 pb-70">
+        <div class="flex w-100% content-between gap-7">
+          <div>
+            <h1 class="h1 textcolor-blue m-0 mb-24">Фотосъёмка на моделях</h1>
+            <ul class="flex flex-column mb-40 gap-35">
+              <li><span class="t1">Обычно фото с моделью является обложкой карточки товара</span></li>
+              <li><span class="t1">Это первый контакт с Вашим продуктом и он должен привлекать, возбуждать и вызывать
+                  сильное
+                  желание приобрести данную продукцию. </span></li>
+              <li><span class="t1">Фото на моделях позволяет покупателю гораздо четче представить продукт на человеке
+                  и в
+                  реальной жизни. </span></li>
+            </ul>
+            <button type="button" class="btn btn--orange">ОСТАВИТЬ ЗАЯВКУ</button>
+          </div>
+          <img src="/src/assets/images/photomodel.png" alt="фотомодель" class="w-460px h-473px">
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer></footer>
   <script type="module" src="/src/main.ts"></script>
 </body>

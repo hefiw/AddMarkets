@@ -35,9 +35,49 @@
 }
 
 .bord-solid {
-    border-style: solid;
+  border-style: solid;
 }
 
 .ff-Montserrat {
-    font-family: $ff-montserrat;
+  font-family: $ff-montserrat;
+}
+
+.color-o {
+  color: $color-orange;
+}
+
+.color-db {
+  color: $color-darkBlue;
+}
+
+.color-p {
+  color: $color-primary;
+}
+
+.color-b {
+  color: $color-blue;
+}
+
+.pos-fix {
+  position: fixed;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.z-bg {
+  z-index: 0;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-h {
+  z-index: 10;
 }

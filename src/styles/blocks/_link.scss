@@ -1,0 +1,24 @@
+.link {
+    color: $color-black;
+    
+    svg {
+        transition: transform 500ms ease-in-out;
+    }
+
+    &--orange {
+        color: $color-orange;
+    }
+
+    &:hover,
+    &:focus-visible {
+        color: $color-blue;
+    }
+
+    &--active {
+        color: $color-orange;
+
+        svg {
+            transform: scaleY(-1);
+        }
+    }
+}

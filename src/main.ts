@@ -15,7 +15,25 @@ document.querySelectorAll<HTMLElement>('[class*="w-"]').forEach((element) => {
   const fclass = classes.find((c) => c.startsWith("w-"));
   if (fclass) {
     const value = fclass.split("-")[1];
-    element.style.width = `${value}px`;
+    element.style.width = `${value}`;
+  }
+});
+
+document.querySelectorAll<HTMLElement>('[class*="maxw-"]').forEach((element) => {
+  const classes = Array.from(element.classList);
+  const fclass = classes.find((c) => c.startsWith("maxw-"));
+  if (fclass) {
+    const value = fclass.split("-")[1];
+    element.style.maxWidth = `${value}`;
+  }
+});
+
+document.querySelectorAll<HTMLElement>('[class*="minw-"]').forEach((element) => {
+  const classes = Array.from(element.classList);
+  const fclass = classes.find((c) => c.startsWith("minw-"));
+  if (fclass) {
+    const value = fclass.split("-")[1];
+    element.style.minWidth = `${value}`;
   }
 });
 
@@ -24,7 +42,7 @@ document.querySelectorAll<HTMLElement>('[class*="h-"]').forEach((element) => {
   const fclass = classes.find((c) => c.startsWith("h-"));
   if (fclass) {
     const value = fclass.split("-")[1];
-    element.style.height = `${value}px`;
+    element.style.height = `${value}`;
   }
 });
 
@@ -173,5 +191,42 @@ document.querySelectorAll<HTMLElement>('[class*="lh-"]').forEach((element) => {
   if (fclass) {
     const value = fclass.split("-")[1];
     element.style.lineHeight = `${value}`;
+  }
+});
+
+//position
+document.querySelectorAll<HTMLElement>('[class*="top-"]').forEach((element) => {
+  const classes = Array.from(element.classList);
+  const fclass = classes.find((c) => c.startsWith("top-"));
+  if (fclass) {
+    const value = fclass.split("-")[1];
+    element.style.top = `${value}`;
+  }
+});
+
+document.querySelectorAll<HTMLElement>('[class*="bottom-"]').forEach((element) => {
+  const classes = Array.from(element.classList);
+  const fclass = classes.find((c) => c.startsWith("bottom-"));
+  if (fclass) {
+    const value = fclass.split("-")[1];
+    element.style.bottom = `${value}`;
+  }
+});
+
+document.querySelectorAll<HTMLElement>('[class*="right-"]').forEach((element) => {
+  const classes = Array.from(element.classList);
+  const fclass = classes.find((c) => c.startsWith("right-"));
+  if (fclass) {
+    const value = fclass.split("-")[1];
+    element.style.right = `${value}`;
+  }
+});
+
+document.querySelectorAll<HTMLElement>('[class*="left-"]').forEach((element) => {
+  const classes = Array.from(element.classList);
+  const fclass = classes.find((c) => c.startsWith("left-"));
+  if (fclass) {
+    const value = fclass.split("-")[1];
+    element.style.left = `${value}`;
   }
 });
