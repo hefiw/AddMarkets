@@ -32,6 +32,11 @@
     background-color: $color-primary;
     border-color: $color-primary;
   }
+
+  @include vp-885 {
+    width: 261px;
+    padding: 24.5px;
+  }
 }
 
 .btn-small {

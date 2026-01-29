@@ -20,5 +20,9 @@
         svg {
             transform: scaleY(-1);
         }
+
+        +.dropdown-menu {
+            display: flex;
+        }
     }
 }

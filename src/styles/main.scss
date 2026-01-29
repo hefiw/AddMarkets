@@ -10,9 +10,11 @@
 @import "./globals/flex";
 
 //blocks
+@import "./blocks/header";
 @import "./blocks/text.scss";
 @import "./blocks/link.scss";
 @import "./blocks/btn.scss";
 @import "./blocks/svg.scss";
+@import "./blocks/firstscreen";
+@import "./blocks/dropdown-menu";
 @import "./blocks/nav";
-@import "./blocks/firstscreen"

@@ -36,6 +36,10 @@
     transform-origin: center;
     animation: rotate-m 500ms ease-in-out both;
   }
+
+  +.dropdown-menu {
+    display: flex;
+  }
 }
 
 @keyframes hidden {

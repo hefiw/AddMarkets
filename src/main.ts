@@ -9,6 +9,24 @@ document.querySelectorAll<HTMLElement>('[class*="gap-"]').forEach((element) => {
   }
 });
 
+document.querySelectorAll<HTMLElement>('[class*="gapRow-"]').forEach((element) => {
+  const classes = Array.from(element.classList);
+  const fclass = classes.find((c) => c.startsWith("gapRow-"));
+  if (fclass) {
+    const value = fclass.split("-")[1];
+    element.style.rowGap = `${value}`;
+  }
+});
+
+document.querySelectorAll<HTMLElement>('[class*="gapColumn-"]').forEach((element) => {
+  const classes = Array.from(element.classList);
+  const fclass = classes.find((c) => c.startsWith("gapColumn-"));
+  if (fclass) {
+    const value = fclass.split("-")[1];
+    element.style.columnGap = `${value}`;
+  }
+});
+
 //sizes
 document.querySelectorAll<HTMLElement>('[class*="w-"]').forEach((element) => {
   const classes = Array.from(element.classList);
