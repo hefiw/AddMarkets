@@ -48,8 +48,46 @@
   }
 
   &--tile {
-    width: 80%;
-    height: 80%;
+    box-shadow: 0px 7px 15px 0px #62707a2e;
+    border-radius: 20px;
+    width: 123px;
+    height: 123px;
     color: $color-primary;
+
+    svg,
+    img {
+      width: 80%;
+      height: 80%;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 8px 0px #bbbbbb33 inset;
+      box-shadow: 0px -4px 4px 0px #a1a1a140 inset;
+      box-shadow: 0px 4px 4px 0px #00000040;
+    }
+
+    &:active {
+      box-shadow: 0px 7px 15px 0px #62707A2E;
+    }
+
+    @include vp-1024 {
+      width: 80px;
+      height: 80px;
+    }
   }
+
+  &--tile-large {
+    width: 244px;
+    height: 244px;
+
+    @include vp-1024 {
+      width: 175px;
+      height: 175px;
+    }
+
+    @include vp-885 {
+      width: 158px;
+      height: 158px;
+    }
+  } 
 }

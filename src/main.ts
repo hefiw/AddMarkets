@@ -1,4 +1,18 @@
 import "./styles/main.scss";
+import Swiper from "swiper";
+
+new Swiper(".swiper", {
+  spaceBetween: 30,
+  slidesPerView: 2,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
 document.querySelectorAll<HTMLElement>('[class*="gap-"]').forEach((element) => {
   const classes = Array.from(element.classList);
@@ -10,21 +24,21 @@ document.querySelectorAll<HTMLElement>('[class*="gap-"]').forEach((element) => {
 });
 
 document.querySelectorAll<HTMLElement>('[class*="gapRow-"]').forEach((element) => {
-  const classes = Array.from(element.classList);
-  const fclass = classes.find((c) => c.startsWith("gapRow-"));
-  if (fclass) {
-    const value = fclass.split("-")[1];
-    element.style.rowGap = `${value}`;
-  }
+    const classes = Array.from(element.classList);
+    const fclass = classes.find((c) => c.startsWith("gapRow-"));
+    if (fclass) {
+      const value = fclass.split("-")[1];
+      element.style.rowGap = `${value}`;
+    }
 });
 
 document.querySelectorAll<HTMLElement>('[class*="gapColumn-"]').forEach((element) => {
-  const classes = Array.from(element.classList);
-  const fclass = classes.find((c) => c.startsWith("gapColumn-"));
-  if (fclass) {
-    const value = fclass.split("-")[1];
-    element.style.columnGap = `${value}`;
-  }
+    const classes = Array.from(element.classList);
+    const fclass = classes.find((c) => c.startsWith("gapColumn-"));
+    if (fclass) {
+      const value = fclass.split("-")[1];
+      element.style.columnGap = `${value}`;
+    }
 });
 
 //sizes
@@ -38,22 +52,24 @@ document.querySelectorAll<HTMLElement>('[class*="w-"]').forEach((element) => {
 });
 
 document.querySelectorAll<HTMLElement>('[class*="maxw-"]').forEach((element) => {
-  const classes = Array.from(element.classList);
-  const fclass = classes.find((c) => c.startsWith("maxw-"));
-  if (fclass) {
-    const value = fclass.split("-")[1];
-    element.style.maxWidth = `${value}`;
-  }
+    const classes = Array.from(element.classList);
+    const fclass = classes.find((c) => c.startsWith("maxw-"));
+    if (fclass) {
+      const value = fclass.split("-")[1];
+      element.style.maxWidth = `${value}`;
+    }
 });
 
-document.querySelectorAll<HTMLElement>('[class*="minw-"]').forEach((element) => {
-  const classes = Array.from(element.classList);
-  const fclass = classes.find((c) => c.startsWith("minw-"));
-  if (fclass) {
-    const value = fclass.split("-")[1];
-    element.style.minWidth = `${value}`;
-  }
-});
+document
+  .querySelectorAll<HTMLElement>('[class*="minw-"]')
+  .forEach((element) => {
+    const classes = Array.from(element.classList);
+    const fclass = classes.find((c) => c.startsWith("minw-"));
+    if (fclass) {
+      const value = fclass.split("-")[1];
+      element.style.minWidth = `${value}`;
+    }
+  });
 
 document.querySelectorAll<HTMLElement>('[class*="h-"]').forEach((element) => {
   const classes = Array.from(element.classList);
@@ -157,32 +173,38 @@ document.querySelectorAll<HTMLElement>('[class*="ml-"]').forEach((element) => {
 });
 
 //borders
-document.querySelectorAll<HTMLElement>('[class*="bord-"]').forEach((element) => {
-  const classes = Array.from(element.classList);
-  const fclass = classes.find((c) => c.startsWith("bord-"));
-  if (fclass) {
-    const value = fclass.split("-")[1];
-    element.style.borderWidth = `${value}`;
-  }
-});
+document
+  .querySelectorAll<HTMLElement>('[class*="bord-"]')
+  .forEach((element) => {
+    const classes = Array.from(element.classList);
+    const fclass = classes.find((c) => c.startsWith("bord-"));
+    if (fclass) {
+      const value = fclass.split("-")[1];
+      element.style.borderWidth = `${value}`;
+    }
+  });
 
-document.querySelectorAll<HTMLElement>('[class*="bordColor-"]').forEach((element) => {
-  const classes = Array.from(element.classList);
-  const fclass = classes.find((c) => c.startsWith("bordColor-"));
-  if (fclass) {
-    const value = fclass.split("-")[1];
-    element.style.borderColor = `${value}`;
-  }
-});
+document
+  .querySelectorAll<HTMLElement>('[class*="bordColor-"]')
+  .forEach((element) => {
+    const classes = Array.from(element.classList);
+    const fclass = classes.find((c) => c.startsWith("bordColor-"));
+    if (fclass) {
+      const value = fclass.split("-")[1];
+      element.style.borderColor = `${value}`;
+    }
+  });
 
-document.querySelectorAll<HTMLElement>('[class*="bordRad-"]').forEach((element) => {
-  const classes = Array.from(element.classList);
-  const fclass = classes.find((c) => c.startsWith("bordRad-"));
-  if (fclass) {
-    const value = fclass.split("-")[1];
-    element.style.borderRadius = `${value}px`;
-  }
-});
+document
+  .querySelectorAll<HTMLElement>('[class*="bordRad-"]')
+  .forEach((element) => {
+    const classes = Array.from(element.classList);
+    const fclass = classes.find((c) => c.startsWith("bordRad-"));
+    if (fclass) {
+      const value = fclass.split("-")[1];
+      element.style.borderRadius = `${value}px`;
+    }
+  });
 
 //fonts
 document.querySelectorAll<HTMLElement>('[class*="fw-"]').forEach((element) => {
@@ -222,29 +244,35 @@ document.querySelectorAll<HTMLElement>('[class*="top-"]').forEach((element) => {
   }
 });
 
-document.querySelectorAll<HTMLElement>('[class*="bottom-"]').forEach((element) => {
-  const classes = Array.from(element.classList);
-  const fclass = classes.find((c) => c.startsWith("bottom-"));
-  if (fclass) {
-    const value = fclass.split("-")[1];
-    element.style.bottom = `${value}`;
-  }
-});
+document
+  .querySelectorAll<HTMLElement>('[class*="bottom-"]')
+  .forEach((element) => {
+    const classes = Array.from(element.classList);
+    const fclass = classes.find((c) => c.startsWith("bottom-"));
+    if (fclass) {
+      const value = fclass.split("-")[1];
+      element.style.bottom = `${value}`;
+    }
+  });
 
-document.querySelectorAll<HTMLElement>('[class*="right-"]').forEach((element) => {
-  const classes = Array.from(element.classList);
-  const fclass = classes.find((c) => c.startsWith("right-"));
-  if (fclass) {
-    const value = fclass.split("-")[1];
-    element.style.right = `${value}`;
-  }
-});
+document
+  .querySelectorAll<HTMLElement>('[class*="right-"]')
+  .forEach((element) => {
+    const classes = Array.from(element.classList);
+    const fclass = classes.find((c) => c.startsWith("right-"));
+    if (fclass) {
+      const value = fclass.split("-")[1];
+      element.style.right = `${value}`;
+    }
+  });
 
-document.querySelectorAll<HTMLElement>('[class*="left-"]').forEach((element) => {
-  const classes = Array.from(element.classList);
-  const fclass = classes.find((c) => c.startsWith("left-"));
-  if (fclass) {
-    const value = fclass.split("-")[1];
-    element.style.left = `${value}`;
-  }
-});
+document
+  .querySelectorAll<HTMLElement>('[class*="left-"]')
+  .forEach((element) => {
+    const classes = Array.from(element.classList);
+    const fclass = classes.find((c) => c.startsWith("left-"));
+    if (fclass) {
+      const value = fclass.split("-")[1];
+      element.style.left = `${value}`;
+    }
+  });
