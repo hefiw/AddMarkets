@@ -1,28 +1,55 @@
 .link {
-    color: $color-black;
-    
+  color: $color-text;
+
+  svg {
+    transition: transform 500ms ease-in-out;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $color-blue;
+  }
+
+  &--orange {
+    color: $color-orange;
+  }
+
+  &--active {
+    color: $color-orange;
+
     svg {
-        transition: transform 500ms ease-in-out;
+      transform: scaleY(-1);
     }
 
-    &--orange {
-        color: $color-orange;
+    + .dropdown-menu {
+      display: flex;
+    }
+  }
+
+  &--mobile {
+    position: relative;
+    z-index: 12;
+
+    &.link--active {
+      text-decoration: underline;
+      color: $color-text;
+      font-weight: 600;
+
+      + .dropdown-menu-mobile__btn-menu {
+        display: flex;
+      }
     }
 
     &:hover,
     &:focus-visible {
-        color: $color-blue;
+      color: $color-orange;
+      text-decoration: underline;
     }
+  }
 
-    &--active {
-        color: $color-orange;
-
-        svg {
-            transform: scaleY(-1);
-        }
-
-        +.dropdown-menu {
-            display: flex;
-        }
-    }
+  &--tile {
+    width: 80%;
+    height: 80%;
+    color: $color-primary;
+  }
 }

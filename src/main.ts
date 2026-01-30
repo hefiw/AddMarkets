@@ -152,7 +152,7 @@ document.querySelectorAll<HTMLElement>('[class*="ml-"]').forEach((element) => {
   const fclass = classes.find((c) => c.startsWith("ml-"));
   if (fclass) {
     const value = fclass.split("-")[1];
-    element.style.marginLeft = `${value}px`;
+    element.style.marginLeft = `${value}`;
   }
 });
 

@@ -30,14 +30,15 @@
   left: 0;
   bottom: 0;
   text-align: center;
+  display: none;
   
   &__item {
-    position: relative;
-    z-index: 12;
-  }
-
-  li {
     background-color: $color-white;
+
+    &:last-child {
+      height: 52px;
+      border-radius: 0 0 16px 16px;
+    }
 
     &::after {
       content: "";
@@ -50,5 +51,20 @@
       box-shadow: $box-shadow-mobile-menu;
       z-index: 11;
     }
+  }
+
+  &__btn-menu {
+    display: none;
+  }
+
+  &__btn-menu-item::before {
+    content: "";
+    height: 0.4px;
+    width: 278px;
+    background-color: #DBDBDB;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
