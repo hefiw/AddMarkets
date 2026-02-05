@@ -5,12 +5,13 @@ new Swiper(".swiper", {
   spaceBetween: 30,
   slidesPerView: 3,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".tarifs__swipper .swiper-pagination",
     type: "bullets",
+    clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.tarifs__swipper .swiper-button-next',
+    prevEl: '.tarifs__swipper .swiper-button-prev',
   },
 });
 

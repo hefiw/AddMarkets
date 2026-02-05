@@ -1,13 +1,38 @@
 .tarifs {
-    margin-bottom: 150px;
+  margin-bottom: 150px;
 
-    .swiper-slide {
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: $box-shadow-slide;
-        background-color: #E2E2E2;
-    }
+  .swiper-slide {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: $box-shadow-slide;
+    background-color: #e2e2e2;
+  }
 
-    img {
-    }
+  &__list {
+    gap: 80px;
+  }
+
+  &__description {
+    max-width: 908px;
+  }
+
+  &__text-wrapper {
+    margin-bottom: 40px;
+  }
+
+  &__byOne {
+    color: #B5B5B5;
+  }
+
+  &__price-top {
+    font-weight: 500;
+    font-size: 40px;
+    gap: 10px;
+  }
+
+  &__price-number {
+    font-weight: 700;
+    font-size: 78px;
+    line-height: 66px;
+  }
 }
