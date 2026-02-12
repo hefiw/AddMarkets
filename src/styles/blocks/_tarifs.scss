@@ -8,20 +8,45 @@
     background-color: #e2e2e2;
   }
 
+  &__item {
+    gap: 40px;
+
+    @include vp-1024 {
+      gap: 30px;
+    }
+
+    @include vp-885 {
+      gap: 25px;
+      flex-direction: column-reverse;
+    }
+  }
+
   &__list {
     gap: 80px;
   }
 
   &__description {
     max-width: 908px;
+
+    @include vp-1024 {
+      max-width: 611px;
+    }
+
+    @include vp-885 {
+      max-width: 343px;
+    }
   }
 
   &__text-wrapper {
-    margin-bottom: 40px;
+    @include vp-885 {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__byOne {
-    color: #B5B5B5;
+    color: #b5b5b5;
   }
 
   &__price-top {

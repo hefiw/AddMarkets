@@ -2,18 +2,18 @@ import "./styles/main.scss";
 import Swiper from "swiper";
 
 new Swiper(".swiper", {
-  spaceBetween: 20,
-  slidesPerView: 1,
-  breakpoints: {
-    885: {
-      slidesPerView: 2,
-      spaceBetween: 40,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-  },
+  spaceBetween: 30,
+  slidesPerView: 3,
+  // breakpoints: {
+  //   885: {
+  //     slidesPerView: 2,
+  //     spaceBetween: 40,
+  //   },
+  //   1024: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 30,
+  //   },
+  // },
   pagination: {
     el: ".tarifs__swipper .swiper-pagination",
     type: "bullets",
