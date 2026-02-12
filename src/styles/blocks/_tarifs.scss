@@ -35,4 +35,19 @@
     font-size: 78px;
     line-height: 66px;
   }
+
+  &__swipper-content {
+    width: 380px;
+    height: 506px;
+
+    @include vp-1024 {
+      width: 412px;
+      height: 550px;
+    }
+
+    @include vp-885 {
+      width: 230px;
+      height: 307px;
+    }
+  }
 }
