@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 //global
 @import "./globals/fonts";
 @import "./globals/variables";
@@ -8,7 +12,6 @@
 @import "./globals/visually-hidden";
 
 @import "./globals/flex";
-@import "tailwindcss";
 
 //blocks
 @import "./blocks/link.scss";
@@ -24,4 +27,3 @@
 @import "./blocks/social";
 @import "./blocks/services";
 @import "./blocks/tarifs";
-

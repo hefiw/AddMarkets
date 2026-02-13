@@ -1,28 +1,43 @@
 import "./styles/main.scss";
 import Swiper from "swiper";
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from "swiper/modules";
 
-new Swiper(".swiper", {
+// new Swiper(".tarifs__swipper", {
+//   modules: [Navigation, Pagination],
+//   spaceBetween: 30,
+//   slidesPerView: 3,
+//   // breakpoints: {
+//   //   885: {
+//   //     slidesPerView: 2,
+//   //     spaceBetween: 40,
+//   //   },
+//   //   1024: {
+//   //     slidesPerView: 3,
+//   //     spaceBetween: 30,
+//   //   },
+//   // },
+//   pagination: {
+//     el: ".tarifs__swipper .swiper-pagination",
+//     type: "bullets",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".tarifs__swipper .swiper-button-next",
+//     prevEl: ".tarifs__swipper .swiper-button-prev",
+//   },
+// });
+
+new Swiper(".tarifs-swiper", {
+  modules: [Navigation, Pagination],
   spaceBetween: 30,
   slidesPerView: 3,
-  // breakpoints: {
-  //   885: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 40,
-  //   },
-  //   1024: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 30,
-  //   },
-  // },
   pagination: {
-    el: ".tarifs__swipper .swiper-pagination",
-    type: "bullets",
+    el: ".tarifs-swiper .swiper-pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: '.tarifs__swipper .swiper-button-next',
-    prevEl: '.tarifs__swipper .swiper-button-prev',
+    nextEl: ".tarifs-swiper .swiper-button-next",
+    prevEl: ".tarifs-swiper .swiper-button-prev",
   },
 });
 
@@ -35,23 +50,27 @@ document.querySelectorAll<HTMLElement>('[class*="gap-"]').forEach((element) => {
   }
 });
 
-document.querySelectorAll<HTMLElement>('[class*="gapRow-"]').forEach((element) => {
+document
+  .querySelectorAll<HTMLElement>('[class*="gapRow-"]')
+  .forEach((element) => {
     const classes = Array.from(element.classList);
     const fclass = classes.find((c) => c.startsWith("gapRow-"));
     if (fclass) {
       const value = fclass.split("-")[1];
       element.style.rowGap = `${value}`;
     }
-});
+  });
 
-document.querySelectorAll<HTMLElement>('[class*="gapColumn-"]').forEach((element) => {
+document
+  .querySelectorAll<HTMLElement>('[class*="gapColumn-"]')
+  .forEach((element) => {
     const classes = Array.from(element.classList);
     const fclass = classes.find((c) => c.startsWith("gapColumn-"));
     if (fclass) {
       const value = fclass.split("-")[1];
       element.style.columnGap = `${value}`;
     }
-});
+  });
 
 //sizes
 document.querySelectorAll<HTMLElement>('[class*="w-"]').forEach((element) => {
@@ -63,14 +82,16 @@ document.querySelectorAll<HTMLElement>('[class*="w-"]').forEach((element) => {
   }
 });
 
-document.querySelectorAll<HTMLElement>('[class*="maxw-"]').forEach((element) => {
+document
+  .querySelectorAll<HTMLElement>('[class*="maxw-"]')
+  .forEach((element) => {
     const classes = Array.from(element.classList);
     const fclass = classes.find((c) => c.startsWith("maxw-"));
     if (fclass) {
       const value = fclass.split("-")[1];
       element.style.maxWidth = `${value}`;
     }
-});
+  });
 
 document
   .querySelectorAll<HTMLElement>('[class*="minw-"]')
