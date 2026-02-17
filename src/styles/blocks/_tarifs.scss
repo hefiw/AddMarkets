@@ -62,7 +62,7 @@
     line-height: 66px;
   }
 
-  &__swipper-content {
+  &__swiper-content {
     width: 380px;
     height: 506px;
 
@@ -74,79 +74,6 @@
     @include vp-885 {
       width: 230px;
       height: 307px;
-    }
-  }
-}
-
-.tarifs {
-  margin-bottom: 150px;
-
-  .swiper-slide {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: $box-shadow-slide;
-    background-color: #e2e2e2;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 44px;
-    height: 44px;
-    margin-top: -22px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    color: #fff;
-    transition: background-color 0.2s;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 10px;
-      height: 10px;
-      border-left: 2px solid currentColor;
-      border-bottom: 2px solid currentColor;
-    }
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-  }
-
-  .swiper-button-prev {
-    left: 8px;
-
-    &::after {
-      margin-left: 6px;
-      transform: rotate(45deg);
-    }
-  }
-
-  .swiper-button-next {
-    right: 8px;
-
-    &::after {
-      margin-right: 6px;
-      margin-left: auto;
-      transform: rotate(-135deg);
-    }
-  }
-
-  .swiper-pagination {
-    position: relative;
-    margin-top: 16px;
-    z-index: 10;
-  }
-
-  .swiper-pagination-bullet {
-    background: #ccc;
-    opacity: 1;
-
-    &-active {
-      background: var(--swiper-theme-color, #007aff);
     }
   }
 }

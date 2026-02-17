@@ -2,35 +2,20 @@ import "./styles/main.scss";
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 
-// new Swiper(".tarifs__swipper", {
-//   modules: [Navigation, Pagination],
-//   spaceBetween: 30,
-//   slidesPerView: 3,
-//   // breakpoints: {
-//   //   885: {
-//   //     slidesPerView: 2,
-//   //     spaceBetween: 40,
-//   //   },
-//   //   1024: {
-//   //     slidesPerView: 3,
-//   //     spaceBetween: 30,
-//   //   },
-//   // },
-//   pagination: {
-//     el: ".tarifs__swipper .swiper-pagination",
-//     type: "bullets",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".tarifs__swipper .swiper-button-next",
-//     prevEl: ".tarifs__swipper .swiper-button-prev",
-//   },
-// });
-
 new Swiper(".tarifs-swiper", {
   modules: [Navigation, Pagination],
   spaceBetween: 30,
-  slidesPerView: 3,
+  slidesPerView: 1,
+  breakpoints: {
+    885: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
   pagination: {
     el: ".tarifs-swiper .swiper-pagination",
     clickable: true,
