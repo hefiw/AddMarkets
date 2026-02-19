@@ -2,11 +2,11 @@
   margin-bottom: 150px;
 
   .swiper-slide {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: $box-shadow-slide;
-    background-color: #e2e2e2;
-    max-width: 250px;
+    //   overflow: hidden;
+    //   border-radius: 10px;
+    //   box-shadow: $box-shadow-slide;
+    // background-color: #e2e2e2;
+    // max-width: fit-content;
   }
 
   &__item {
@@ -66,14 +66,14 @@
     width: 380px;
     height: 506px;
 
-    @include vp-1024 {
-      width: 412px;
-      height: 550px;
-    }
+    // @include vp-1024 {
+    //   width: 412px;
+    //   height: 550px;
+    // }
 
-    @include vp-885 {
-      width: 230px;
-      height: 307px;
-    }
+    // @include vp-885 {
+    //   width: 230px;
+    //   height: 307px;
+    // }
   }
 }

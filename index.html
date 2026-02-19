@@ -246,6 +246,17 @@
 
             <div class="tarifs__swiper swiper">
               <div class="swiper-wrapper">
+                <div class="swiper-slide">1</div>
+                <div class="swiper-slide">2</div>
+                <div class="swiper-slide">3</div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev">prev</div>
+              <div class="swiper-button-next">next</div>
+            </div>
+            <!-- <div class="tarifs__swiper swiper">
+              <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="flex items-center content-center tarifs__swiper-content">
                     <img src="/src/assets/images/imgSlide-1-1.jpg">
@@ -291,12 +302,57 @@
                     </svg>
                   </div>
                 </div>
+                <div class="swiper-slide">
+                  <div class="tarifs__swiper-content flex items-center content-center">
+                    <img src="">
+                    <svg class="color-blue" width="101" height="51" viewBox="0 0 101 51" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M30.5871 16.7012C31.3824 15.8094 32.7772 15.8094 33.5725 16.7012L64.1595 51.0009H0L30.5871 16.7012Z"
+                        fill="currentColor" />
+                      <path
+                        d="M58.9252 7.73503C59.7207 6.84134 61.1176 6.84134 61.913 7.73503L100.422 50.9992H20.416L58.9252 7.73503Z"
+                        fill="currentColor" />
+                      <ellipse cx="6.97673" cy="6.9834" rx="6.97673" ry="6.9834" fill="currentColor" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="tarifs__swiper-content flex items-center content-center">
+                    <img src="">
+                    <svg class="color-blue" width="101" height="51" viewBox="0 0 101 51" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M30.5871 16.7012C31.3824 15.8094 32.7772 15.8094 33.5725 16.7012L64.1595 51.0009H0L30.5871 16.7012Z"
+                        fill="currentColor" />
+                      <path
+                        d="M58.9252 7.73503C59.7207 6.84134 61.1176 6.84134 61.913 7.73503L100.422 50.9992H20.416L58.9252 7.73503Z"
+                        fill="currentColor" />
+                      <ellipse cx="6.97673" cy="6.9834" rx="6.97673" ry="6.9834" fill="currentColor" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="tarifs__swiper-content flex items-center content-center">
+                    <img src="">
+                    <svg class="color-blue" width="101" height="51" viewBox="0 0 101 51" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M30.5871 16.7012C31.3824 15.8094 32.7772 15.8094 33.5725 16.7012L64.1595 51.0009H0L30.5871 16.7012Z"
+                        fill="currentColor" />
+                      <path
+                        d="M58.9252 7.73503C59.7207 6.84134 61.1176 6.84134 61.913 7.73503L100.422 50.9992H20.416L58.9252 7.73503Z"
+                        fill="currentColor" />
+                      <ellipse cx="6.97673" cy="6.9834" rx="6.97673" ry="6.9834" fill="currentColor" />
+                    </svg>
+                  </div>
+                </div>
               </div>
 
               <div class="swiper-pagination"></div>
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
-            </div>
+            </div> -->
           </li>
           <li class="tarifs__item flex flex-column">
             <div class="tarifs__text-wrapper flex content-between gap-16">
@@ -321,7 +377,7 @@
                 <span class="tarifs__byOne t1">Цена за 1 фото</span>
               </div>
             </div>
-            
+
           </li>
           <li class="tarifs__item flex flex-column">
             <div class="tarifs__text-wrapper flex content-between gap-16">
@@ -535,6 +591,74 @@
               </div> -->
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="check">
+      <div class="container">
+        <div class="check__text-wrapper">
+          <h2 class="">Запросить расчет стоимости</h2>
+          <p class="">Заполните форму и&nbsp;оператор &laquo;AddMarkets&raquo;
+            свяжется с&nbsp;Вами в&nbsp;ближайшее время</p>
+        </div>
+        <form class="check__form" action="#" method="post">
+          <fieldset name="check">
+            <button class="check__info" type="button">
+              <span>Ценообразование</span>
+            </button>
+            <input class="input" type="text" name="check" id="check-name" required="true" placeholder="Имя *">
+            <input class="input" type="tel" name="check" id="check-tel" required="true" placeholder="Телефон *">
+            <input class="input" type="email" name="check" id="check-email" required="true" placeholder="E-mail *">
+            <input class="input" type="text" name="check" id="check-count" placeholder="Кол-во артикулов">
+            <textarea class="input" name="check" id="check-productions"
+              placeholder="Продукция ~ обувь, платье, кастрюли, кофе, лыжи и.т.д"></textarea>
+            <div class="check__checkbox-wrapper">
+              <div class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-SEO">
+                <label class="checkbox__text" for="check-cb-SEO">SEO оптимизированные тексты</label>
+              </div>
+              <div class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-video">
+                <label class="checkbox__text" for="check-cb-video">Видео</label>
+              </div>
+              <div class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-model-photo">
+                <label class="checkbox__text" for="check-cb-model-photo">Фото на моделях</label>
+              </div>
+              <div class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-image-photo">
+                <label class="checkbox__text" for="check-cb-image-photo">Имиджевая фотосъемка</label>
+              </div>
+              <div class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-design">
+                <label class="checkbox__text" for="check-cb-design">Дизайн карточек товара и инфографика</label>
+              </div>
+              <div class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-subject-photo">
+                <label class="checkbox__text" for="check-cb-subject-photo">Предметное фото</label>
+              </div>
+              <div class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-360-photo">
+                <label class="checkbox__text" for="check-cb-360-photo">Фото 360</label>
+              </div>
+              <div class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-invisible-mannequin">
+                <label class="checkbox__text" for="check-cb-invisible-mannequin">Фото на невидимом манекене</label>
+              </div>
+              <div class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-product-layout">
+                <label class="checkbox__text" for="check-cb-product-layout">Фото раскладки товара</label>
+              </div>
+            </div>
+            <button class="" type="submit" name="check">КНОПКА</button>
+            <div class="checkbox">
+              <input class="visually-hidden" type="checkbox" name="check" id="check-cb-polit" required="true">
+              <label class="checkbox__text" for="check-cb-polit">
+                С&nbsp;<a href="#">Политикой конфиденциальности</a>&nbsp;ознакомлен
+              </label>
+            </div>
+          </fieldset>
+        </form>
       </div>
     </section>
 

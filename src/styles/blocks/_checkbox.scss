@@ -1,0 +1,25 @@
+.checkbox {
+  &__text {
+    display: flex;
+    position: relative;
+    margin-left: 28px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border: #c9c9c9 solid 2px;
+      border-radius: 3px;
+      position: absolute;
+      left: -8px;
+      transform: translateX(-100%);
+    }
+  }
+
+  input:checked {
+    + .checkbox__text::before {
+      border-color: #ED6C21;
+    }
+  }
+}

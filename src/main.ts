@@ -2,28 +2,18 @@ import "./styles/main.scss";
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 
-new Swiper(".tarifs-swiper", {
-  modules: [Navigation, Pagination],
-  spaceBetween: 30,
-  slidesPerView: 1,
-  breakpoints: {
-    885: {
-      slidesPerView: 2,
-      spaceBetween: 40,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-  },
-  pagination: {
-    el: ".tarifs-swiper .swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".tarifs-swiper .swiper-button-next",
-    prevEl: ".tarifs-swiper .swiper-button-prev",
-  },
+new Swiper(".tarifs__swiper.swiper", {
+  // modules: [Navigation, Pagination],
+  // spaceBetween: 30,
+  // slidesPerView: 3,
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
 });
 
 document.querySelectorAll<HTMLElement>('[class*="gap-"]').forEach((element) => {
