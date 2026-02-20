@@ -1,3 +1,15 @@
 .input {
-    
+  width: 100%;
+  
+  &__field {
+    width: 100%;
+    padding: 12px;
+    border: 1px #c9c9c9 solid;
+    border-radius: 8px;
+
+    &:hover,
+    &:focus {
+      border-color: $color-orange;
+    }
+  }
 }

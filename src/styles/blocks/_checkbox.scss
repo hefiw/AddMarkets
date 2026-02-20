@@ -4,6 +4,7 @@
     position: relative;
     margin-left: 28px;
     cursor: pointer;
+    user-select: none;
 
     &::before {
       content: "";
@@ -12,14 +13,36 @@
       border: #c9c9c9 solid 2px;
       border-radius: 3px;
       position: absolute;
+      top: 50%;
       left: -8px;
-      transform: translateX(-100%);
+      transform: translate(-100%, -50%);
     }
   }
 
+  &__check {
+    position: absolute;
+    left: -13px;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    display: none;
+  }
+
   input:checked {
-    + .checkbox__text::before {
-      border-color: #ED6C21;
+    + .checkbox__text {
+      &::before {
+        border-color: #ed6c21;
+      }
+
+      .checkbox__check {
+        display: flex;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .checkbox__text::before {
+      border-color: $color-orange;
     }
   }
 }

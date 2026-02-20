@@ -244,7 +244,7 @@
               </div>
             </div>
 
-            <div class="tarifs__swiper swiper">
+            <!-- <div class="tarifs__swiper swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">1</div>
                 <div class="swiper-slide">2</div>
@@ -254,7 +254,7 @@
               <div class="swiper-pagination"></div>
               <div class="swiper-button-prev">prev</div>
               <div class="swiper-button-next">next</div>
-            </div>
+            </div> -->
             <!-- <div class="tarifs__swiper swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -596,69 +596,153 @@
 
     <section class="check">
       <div class="container">
-        <div class="check__text-wrapper">
-          <h2 class="">Запросить расчет стоимости</h2>
-          <p class="">Заполните форму и&nbsp;оператор &laquo;AddMarkets&raquo;
-            свяжется с&nbsp;Вами в&nbsp;ближайшее время</p>
+        <div class="check__form-wrapper">
+          <div class="check__text-wrapper">
+            <h2 class="check__title textcolor-blue h3">Запросить расчет стоимости</h2>
+            <p class="check__title-text t3">Заполните форму и&nbsp;оператор &laquo;AddMarkets&raquo;
+              свяжется с&nbsp;Вами в&nbsp;ближайшее время</p>
+          </div>
+          <button class="check__info flex items-center content-center gap-4 h6" type="button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM11 15H9V9H11V15ZM11 7H9V5H11V7Z"
+                fill="#C9C9C9" />
+            </svg>
+            <span>Ценообразование</span>
+          </button>
+          <form class="check__form" id="check" action="#" method="post" novalidate>
+            <fieldset class="check__form-set" name="check">
+              <div class="input">
+                <input class="input__field t3 mb-16" type="text" name="check-name" id="check-name" required="true"
+                  placeholder="Имя *">
+                <span class="input__err"></span>
+              </div>
+              <div class="input">
+                <input class="input__field t3 mb-16" type="tel" name="check-tel" id="check-tel" required="true"
+                  placeholder="Телефон *">
+                <span class="input__err"></span>
+              </div>
+              <div class="input">
+                <input class="input__field t3 mb-16" type="email" name="check-email" id="check-email" required="true"
+                  placeholder="E-mail *">
+                <span class="input__err"></span>
+              </div>
+              <div class="input">
+                <input class="input__field t3 mb-16" type="text" name="check-count" id="check-count"
+                  placeholder="Кол-во артикулов">
+              </div>
+              <div class="input">
+                <textarea class="check__textarea input__field t3 mb-24" name="check-productions" id="check-productions"
+                  placeholder="Продукция ~ обувь, платье, кастрюли, кофе, лыжи и.т.д"></textarea>
+              </div>
+              <div class="check__checkbox-wrapper mb-33">
+                <div class="checkbox t3">
+                  <input class="visually-hidden" type="checkbox" name="check-cb-SEO" id="check-cb-SEO">
+                  <label class="checkbox__text" for="check-cb-SEO">SEO оптимизированные тексты
+                    <svg class="checkbox__check" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5L4.5 9L10 1" stroke="#ED6C21" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </label>
+                </div>
+                <div class="checkbox t3">
+                  <input class="visually-hidden" type="checkbox" name="check-cb-video" id="check-cb-video">
+                  <label class="checkbox__text" for="check-cb-video">Видео
+                    <svg class="checkbox__check" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5L4.5 9L10 1" stroke="#ED6C21" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </label>
+                </div>
+                <div class="checkbox t3">
+                  <input class="visually-hidden" type="checkbox" name="check-cb-model-photo" id="check-cb-model-photo">
+                  <label class="checkbox__text" for="check-cb-model-photo">Фото на моделях
+                    <svg class="checkbox__check" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5L4.5 9L10 1" stroke="#ED6C21" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </label>
+                </div>
+                <div class="checkbox t3">
+                  <input class="visually-hidden" type="checkbox" name="check-cb-image-photo" id="check-cb-image-photo">
+                  <label class="checkbox__text" for="check-cb-image-photo">Имиджевая фотосъемка
+                    <svg class="checkbox__check" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5L4.5 9L10 1" stroke="#ED6C21" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </label>
+                </div>
+                <div class="checkbox t3">
+                  <input class="visually-hidden" type="checkbox" name="check-cb-design" id="check-cb-design">
+                  <label class="checkbox__text" for="check-cb-design">Дизайн карточек товара и инфографика
+                    <svg class="checkbox__check" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5L4.5 9L10 1" stroke="#ED6C21" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </label>
+                </div>
+                <div class="checkbox t3">
+                  <input class="visually-hidden" type="checkbox" name="check-cb-subject-photo" id="check-cb-subject-photo">
+                  <label class="checkbox__text" for="check-cb-subject-photo">Предметное фото
+                    <svg class="checkbox__check" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5L4.5 9L10 1" stroke="#ED6C21" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </label>
+                </div>
+                <div class="checkbox t3">
+                  <input class="visually-hidden" type="checkbox" name="check-cb-360-photo" id="check-cb-360-photo">
+                  <label class="checkbox__text" for="check-cb-360-photo">Фото 360
+                    <svg class="checkbox__check" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5L4.5 9L10 1" stroke="#ED6C21" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </label>
+                </div>
+                <div class="checkbox t3">
+                  <input class="visually-hidden" type="checkbox" name="check-cb-invisible-mannequin" id="check-cb-invisible-mannequin">
+                  <label class="checkbox__text" for="check-cb-invisible-mannequin">Фото на невидимом манекене
+                    <svg class="checkbox__check" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5L4.5 9L10 1" stroke="#ED6C21" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </label>
+                </div>
+                <div class="checkbox t3">
+                  <input class="visually-hidden" type="checkbox" name="check-cb-product-layout" id="check-cb-product-layout">
+                  <label class="checkbox__text" for="check-cb-product-layout">Фото раскладки товара
+                    <svg class="checkbox__check" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5L4.5 9L10 1" stroke="#ED6C21" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <button class="btn mb-16" type="submit" name="check">КНОПКА</button>
+              <div class="checkbox t3">
+                <input class="visually-hidden" type="checkbox" name="check-cb-polit" id="check-cb-polit" required="true">
+                <label class="checkbox__text" for="check-cb-polit">
+                  С&nbsp;<a class="check__link link" href="#">Политикой конфиденциальности</a>&nbsp;ознакомлен
+                  <svg class="checkbox__check" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 5L4.5 9L10 1" stroke="#ED6C21" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </label>
+                <span class="input__err"></span>
+              </div>
+            </fieldset>
+          </form>
         </div>
-        <form class="check__form" action="#" method="post">
-          <fieldset name="check">
-            <button class="check__info" type="button">
-              <span>Ценообразование</span>
-            </button>
-            <input class="input" type="text" name="check" id="check-name" required="true" placeholder="Имя *">
-            <input class="input" type="tel" name="check" id="check-tel" required="true" placeholder="Телефон *">
-            <input class="input" type="email" name="check" id="check-email" required="true" placeholder="E-mail *">
-            <input class="input" type="text" name="check" id="check-count" placeholder="Кол-во артикулов">
-            <textarea class="input" name="check" id="check-productions"
-              placeholder="Продукция ~ обувь, платье, кастрюли, кофе, лыжи и.т.д"></textarea>
-            <div class="check__checkbox-wrapper">
-              <div class="checkbox">
-                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-SEO">
-                <label class="checkbox__text" for="check-cb-SEO">SEO оптимизированные тексты</label>
-              </div>
-              <div class="checkbox">
-                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-video">
-                <label class="checkbox__text" for="check-cb-video">Видео</label>
-              </div>
-              <div class="checkbox">
-                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-model-photo">
-                <label class="checkbox__text" for="check-cb-model-photo">Фото на моделях</label>
-              </div>
-              <div class="checkbox">
-                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-image-photo">
-                <label class="checkbox__text" for="check-cb-image-photo">Имиджевая фотосъемка</label>
-              </div>
-              <div class="checkbox">
-                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-design">
-                <label class="checkbox__text" for="check-cb-design">Дизайн карточек товара и инфографика</label>
-              </div>
-              <div class="checkbox">
-                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-subject-photo">
-                <label class="checkbox__text" for="check-cb-subject-photo">Предметное фото</label>
-              </div>
-              <div class="checkbox">
-                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-360-photo">
-                <label class="checkbox__text" for="check-cb-360-photo">Фото 360</label>
-              </div>
-              <div class="checkbox">
-                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-invisible-mannequin">
-                <label class="checkbox__text" for="check-cb-invisible-mannequin">Фото на невидимом манекене</label>
-              </div>
-              <div class="checkbox">
-                <input class="visually-hidden" type="checkbox" name="check" id="check-cb-product-layout">
-                <label class="checkbox__text" for="check-cb-product-layout">Фото раскладки товара</label>
-              </div>
-            </div>
-            <button class="" type="submit" name="check">КНОПКА</button>
-            <div class="checkbox">
-              <input class="visually-hidden" type="checkbox" name="check" id="check-cb-polit" required="true">
-              <label class="checkbox__text" for="check-cb-polit">
-                С&nbsp;<a href="#">Политикой конфиденциальности</a>&nbsp;ознакомлен
-              </label>
-            </div>
-          </fieldset>
-        </form>
       </div>
     </section>
 
