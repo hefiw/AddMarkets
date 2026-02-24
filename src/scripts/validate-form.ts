@@ -12,7 +12,6 @@ enum TYPES_INPUT {
 function minLengthValid(len: number, m: number, span: HTMLElement): boolean {
   const f = len > m;
   if (!f) {
-    console.log(span);
     span.textContent = `Длина должна быть больше ${m} символов`;
   }
   return f;
@@ -21,7 +20,6 @@ function minLengthValid(len: number, m: number, span: HTMLElement): boolean {
 function checkValid(check: boolean, span: HTMLElement): boolean {
   const f = check;
   if (!f) {
-    console.log(span);
     span.textContent = `Обязательное поле`;
   }
   return f;
@@ -31,7 +29,6 @@ function mobileValid(value: string, span: HTMLElement): boolean {
   const regex = /^[0-9\s-]*$/;
   const f = regex.test(value);
   if (!f) {
-    console.log(span);
     span.textContent = `Некоректный номер телефона`;
   }
   return f;
@@ -44,7 +41,6 @@ function includeValid(
 ): boolean {
   const f = value.includes(checkedString);
   if (!f) {
-    console.log(span);
     span.textContent = `Некоректный адрес почты`;
   }
   return f;
