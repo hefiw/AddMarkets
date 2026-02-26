@@ -1,6 +1,14 @@
 .check {
     margin-bottom: 145px;
 
+    @include vp-1024 {
+        margin-bottom: 115px;
+    }
+
+    @include vp-885 {
+        margin-bottom: 60px;
+    }
+
     &__wrapper {
         @include vp-1440 {
             flex-direction: column-reverse;

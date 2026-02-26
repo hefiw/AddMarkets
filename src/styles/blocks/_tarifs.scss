@@ -1,6 +1,14 @@
 .tarifs {
   margin-bottom: 150px;
 
+    @include vp-1024 {
+        margin-bottom: 125px;
+    }
+
+    @include vp-885 {
+        margin-bottom: 60px;
+    }
+
   .swiper-slide {
     //   overflow: hidden;
     //   border-radius: 10px;
