@@ -99,3 +99,24 @@ if (FORM && REQUIRED_FIELDS) {
     }
   });
 }
+
+const INFO:HTMLElement|null = document.querySelector('.info-content');
+const INFO_OPEN_BTN:HTMLElement|null = document.querySelector('.check__info');
+
+INFO_OPEN_BTN?.addEventListener('click', () => {
+  if (!INFO) return;
+  INFO.style.display = 'flex';
+});
+
+// document.addEventListener('click', () => {
+//   console.log(2);
+//   if (!INFO) return;
+//   if (INFO.style.display === 'flex') {  
+//     INFO.style.display = 'none';  
+//   }
+// });
+
+// document.querySelector('.info-content__wrapper')?.addEventListener("click", (e) => {
+//   console.log(3);
+//   e.stopPropagation();
+// });
