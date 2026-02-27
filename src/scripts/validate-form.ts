@@ -154,10 +154,14 @@ DESKTOP_DW_BTN?.addEventListener("click", () => {
   desktopDwToggle();
 });
 
-DESKTOP_DW_BTN?.addEventListener("mouseout", () => {
-  desktopDwOff();
+DESKTOP_DW_BTN?.addEventListener("mouseleave", (e) => {
+  if (e.relatedTarget !== DESKTOP_DW) {
+    desktopDwOff();
+  }
 });
 
-DESKTOP_DW?.addEventListener("mouseout", () => {
-  desktopDwToggle();
+DESKTOP_DW?.addEventListener("mouseleave", (e) => {
+  if (e.relatedTarget !== DESKTOP_DW_BTN) {
+    desktopDwOff();
+  }
 });
