@@ -101,7 +101,9 @@ if (FORM && REQUIRED_FIELDS) {
 }
 
 const INFO: HTMLElement | null = document.querySelector(".info-content");
-const INFO_CLOSE_BTN: HTMLElement | null = document.querySelector('#info-content__close-button');
+const INFO_CLOSE_BTN: HTMLElement | null = document.querySelector(
+  "#info-content__close-button",
+);
 const INFO_OPEN_BTN: HTMLElement | null =
   document.querySelector(".check__info");
 
@@ -115,7 +117,7 @@ INFO_CLOSE_BTN?.addEventListener("click", () => {
   if (INFO.style.display === "flex") {
     INFO.style.display = "none";
   }
-})
+});
 
 INFO?.addEventListener("click", () => {
   if (INFO.style.display === "flex") {
@@ -126,4 +128,36 @@ INFO?.addEventListener("click", () => {
     ?.addEventListener("click", (e) => {
       e.stopPropagation();
     });
+});
+
+const DESKTOP_DW_BTN: HTMLElement | null = document.querySelector(
+  "#desktop-dropdown-btn",
+);
+const DESKTOP_DW: HTMLElement | null =
+  document.querySelector("#desktop-dropdown");
+
+const desktopDwToggle = (): void => {
+  if (!DESKTOP_DW_BTN) return;
+  DESKTOP_DW_BTN.classList.toggle("link--active");
+  return;
+};
+
+const desktopDwOff = (): void => {
+  if (!DESKTOP_DW_BTN) return;
+  DESKTOP_DW_BTN.classList.remove("link--active");
+  return;
+};
+
+console.log(DESKTOP_DW);
+
+DESKTOP_DW_BTN?.addEventListener("click", () => {
+  desktopDwToggle();
+});
+
+DESKTOP_DW_BTN?.addEventListener("mouseout", () => {
+  desktopDwOff();
+});
+
+DESKTOP_DW?.addEventListener("mouseout", () => {
+  desktopDwToggle();
 });
