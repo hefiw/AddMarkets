@@ -155,13 +155,14 @@ DESKTOP_DW_BTN?.addEventListener("click", () => {
 });
 
 DESKTOP_DW_BTN?.addEventListener("mouseleave", (e) => {
-  if (e.relatedTarget !== DESKTOP_DW) {
+  console.log();
+  if (e.relatedTarget !== DESKTOP_DW && !(DESKTOP_DW?.contains(e.relatedTarget as Node))) {
     desktopDwOff();
   }
 });
 
 DESKTOP_DW?.addEventListener("mouseleave", (e) => {
-  if (e.relatedTarget !== DESKTOP_DW_BTN) {
+  if (e.relatedTarget !== DESKTOP_DW_BTN && !(DESKTOP_DW_BTN?.contains(e.relatedTarget as Node))) {
     desktopDwOff();
   }
 });
