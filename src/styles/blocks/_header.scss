@@ -11,6 +11,8 @@
   }
 
   &__header {
+    height: max-content;
+
     @include vp-885 {
       &:has(.mobile-menu--open) {
         background-color: $color-white;

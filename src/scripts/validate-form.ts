@@ -178,7 +178,5 @@ const MOBILE_DW_BTN: HTMLElement | null = document.querySelector(
 );
 
 MOBILE_DW_BTN?.addEventListener("click", () => {
-  setTimeout(function () {
-    MOBILE_DW_BTN.classList.toggle("mobile-menu--open");
-  }, 500);
+  MOBILE_DW_BTN.classList.toggle("mobile-menu--open");
 });
