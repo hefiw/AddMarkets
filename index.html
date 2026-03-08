@@ -12,9 +12,9 @@
 
 <body>
   <header class="header maxw-100vw ff-Montserrat fw-500 h-100vh">
-    <div class="container flex flex-column">
-      <section class="flex items-center content-between gap-16">
-        <button type="button" class="w-34px h-34px svg__mobile-btn mobile-vision mobile-menu--open">
+    <div class="flex flex-column">
+      <section class="header__header container flex items-center content-between gap-16 pos-rel">
+        <button type="button" class="w-34px h-34px svg__mobile-btn mobile-menu--open mobile-vision" id="mobile-dropdown-btn">
           <!-- openclass: mobile-menu--open -->
           <svg width="9" height="7" class="w-34px h-34px">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -31,7 +31,7 @@
               <a href="#" class="link--mobile link"> Маркетплейсы </a>
             </li>
             <li class="dropdown-menu-mobile__item p-16 pos-rel flex flex-column items-center gap-32">
-              <button type="button" class="link link--active link--mobile flex items-center gap-4 t2">
+              <button type="button" class="link link--mobile flex items-center gap-4 t2">
                 <!-- openclass: link--active -->
                 <span>Контент</span>
                 <svg width="9" height="7">
@@ -180,7 +180,7 @@
         </button>
       </section>
 
-      <section class="firstscreen w-100% h-100%">
+      <section class="container firstscreen w-100% h-100%">
         <div class="pos-rel flex flex-column items-center pt-70 gap-75">
           <div class="flex mobile-reverse-orientation items-center w-100% content-between gapRow-24px gapColumn-50px">
             <div class="flex flex-column mobile-transform">

@@ -130,6 +130,7 @@ INFO?.addEventListener("click", () => {
     });
 });
 
+
 const DESKTOP_DW_BTN: HTMLElement | null = document.querySelector(
   "#desktop-dropdown-btn",
 );
@@ -165,4 +166,13 @@ DESKTOP_DW?.addEventListener("mouseleave", (e) => {
   if (e.relatedTarget !== DESKTOP_DW_BTN && !(DESKTOP_DW_BTN?.contains(e.relatedTarget as Node))) {
     desktopDwOff();
   }
+});
+
+
+const MOBILE_DW_BTN: HTMLElement | null = document.querySelector(
+  "#mobile-dropdown-btn",
+);
+
+MOBILE_DW_BTN?.addEventListener("click", () => {
+  MOBILE_DW_BTN.classList.toggle("mobile-menu--open");
 });
