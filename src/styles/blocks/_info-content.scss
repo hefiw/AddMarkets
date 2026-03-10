@@ -17,8 +17,12 @@
   &__wrapper {
     background-color: #fff;
     border-radius: 28px;
-    width: 52vw;
-    z-index: 10;
+    max-width: 1000px;
+    width: 52%;
+
+    @include vp-1440 {
+      width: 77%;
+    }
   }
 
   &__title {
@@ -27,6 +31,10 @@
     margin-bottom: 60px;
     box-shadow: 0px 7px 30px 0px #79797933;
     border-radius: 28px;
+
+    @include vp-885 {
+      margin-bottom: 30px;
+    }
 
     img {
         width: 41%;
@@ -39,5 +47,20 @@
     max-width: 735px;
     padding: 0 20px;
     margin-bottom: 55px;
+    gap: 14px;
+
+    @include vp-885 {
+      gap: 7px;
+    }
+
+    li {
+      gap: 14px;
+      
+      @include vp-885 {
+        gap: 7px;
+      }
+    }
   }
+
+  
 }
