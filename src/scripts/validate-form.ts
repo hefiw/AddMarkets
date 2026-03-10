@@ -180,3 +180,20 @@ const MOBILE_DW_BTN: HTMLElement | null = document.querySelector(
 MOBILE_DW_BTN?.addEventListener("click", () => {
   MOBILE_DW_BTN.classList.toggle("mobile-menu--open");
 });
+
+const MOBILE_CONTENT_DW_BTN: HTMLElement | null = document.querySelector(
+  "#mobile-content-dropdown-btn",
+);
+const MOBILE_DESIGNE_DW_BTN: HTMLElement | null = document.querySelector(
+  "#mobile-designe-dropdown-btn",
+);
+
+MOBILE_CONTENT_DW_BTN?.addEventListener("click", () => {
+  MOBILE_DESIGNE_DW_BTN?.classList.remove("link--active");
+  MOBILE_CONTENT_DW_BTN.classList.toggle("link--active");
+});
+
+MOBILE_DESIGNE_DW_BTN?.addEventListener("click", () => {
+  MOBILE_CONTENT_DW_BTN?.classList.remove("link--active");
+  MOBILE_DESIGNE_DW_BTN.classList.toggle("link--active");
+});

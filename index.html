@@ -14,7 +14,7 @@
 
   <body>
     <header class="header maxw-100vw ff-Montserrat fw-500">
-      <div class="flex flex-column">
+      <div class="flex flex-column header__wrapper">
         <section
           class="header__header container flex items-center content-between gap-16 pos-rel"
         >
@@ -61,9 +61,9 @@
             </svg>
           </button>
           <div class="pos-abs dropdown-menu-mobile w-100vw">
-            <ul class="dropdown-menu-mobile__list flex flex-column t2">
+            <ul class="dropdown-menu-mobile__list flex flex-column t2 w-100%">
               <li
-                class="dropdown-menu-mobile__item p-16 pos-rel flex content-center"
+                class="dropdown-menu-mobile__item p-16 pt-29 pos-rel flex content-center"
               >
                 <a href="#" class="link--mobile link"> Маркетплейсы </a>
               </li>
@@ -73,6 +73,7 @@
                 <button
                   type="button"
                   class="link link--mobile flex items-center gap-4 t2"
+                  id="mobile-content-dropdown-btn"
                 >
                   <!-- openclass: link--active -->
                   <span>Контент</span>
@@ -130,6 +131,7 @@
                 <button
                   type="button"
                   class="link--mobile link flex items-center gap-4 t2"
+                  id="mobile-designe-dropdown-btn"
                 >
                   <!-- openclass: link--active -->
                   <span>Дизайн</span>

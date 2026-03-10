@@ -23,6 +23,10 @@
 }
 
 .mobile-menu--open {
+  +.dropdown-menu-mobile {
+    display: flex;
+  }
+
   .mobile-menu-tr {
     transform-origin: center;
     animation: rotate-open 300ms ease-in-out both;
