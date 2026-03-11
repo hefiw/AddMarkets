@@ -1,0 +1,22 @@
+.info {
+  color: $color-white;
+
+  &__title-column {
+    border-bottom: #b5dfff solid 1px;
+  }
+
+  &__main-item {
+    width: calc(100% / 4);
+  }
+
+  &__social-link {
+    &:hover,
+    &:focus {
+      color: $color-white;
+    }
+
+    &:active {
+        color: $color-darkBlue;
+    }
+  }
+}

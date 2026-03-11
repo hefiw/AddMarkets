@@ -14,6 +14,15 @@
     color: $color-orange;
   }
 
+  &--white {
+    color: $color-white;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-orange;
+    }
+  }
+
   &--active {
     color: $color-orange;
 
