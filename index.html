@@ -944,18 +944,18 @@
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="container flex flex-column footer__wrapper">
-      <section class="footer__consultation consultation flex">
+  <footer class="footer pos-rel">
+    <div class="container flex flex-column footer__wrapper items-center">
+      <section class="footer__consultation consultation flex pos-rel">
         <div class="consultation__img">
-          <img class="" width="610px" src="./src/assets/images/consultation-img.png" alt="">
+          <img class="pos-abs consultation__img-center" width="610px" src="./src/assets/images/consultation-img.png" alt="">
         </div>
-        <div class="flex flex-column">
-          <h2 class="consultation__title textcolor-blue h3 m-0">
+        <div class="flex flex-column consultation__text-wrapper ml-auto">
+          <h2 class="consultation__title textcolor-blue h3 m-0 mb-30">
             Здесь вы&nbsp;можете
             получить консультацию специалиста
           </h2>
-          <p class="consultation__text t1 m-0">
+          <p class="consultation__text t1 m-0 mb-24">
             Просто оставьте ваши контакты и&nbsp;наш
             специалист обязательно свяжется
             с&nbsp;вами в&nbsp;ближайшее время.
@@ -965,6 +965,7 @@
           </a>
         </div>
       </section>
+
       <section class="footer__info info">
         <ul class="info__main-list flex content-between">
           <li class="info__main-item flex flex-column">
@@ -1054,6 +1055,18 @@
         </ul>
       </section>
     </div>
+
+    <section class="footer__bottom flex pos-abs pos-abs">
+      <div class="container flex items-center content-between">
+        <svg height="30" width="273">
+          <use xlink:href="./src/assets/sprite.svg#IFooterTitle"></use>
+        </svg>
+        <div class="flex flex-column gap-7">
+          <p class="footer-bottom underline m-0">© 2021 Addmarkets group</p>
+          <p class="footer-bottom m-0">Designed by: @iwon.design</p>
+        </div>
+      </div>
+    </section>
   </footer>
   <script type="module" src="/src/main.ts"></script>
 </body>

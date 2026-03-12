@@ -75,6 +75,19 @@
     line-height: 15px;
 }
 
+.footer-bottom {
+    font-family: $ff-montserrat;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    color: $color-white;
+    text-align: right;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
 .textcolor-blue {
     color: #47A7E3;
 }

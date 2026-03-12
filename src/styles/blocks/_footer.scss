@@ -2,4 +2,11 @@
     background-image: url("../../assets/images/footer-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
+    &__bottom {
+        background-color: #2F6192;
+        width: 100%;
+        padding: 18px;
+        bottom: -14px;
+    }
 }
