@@ -83,3 +83,11 @@
     }
   }
 }
+
+#scroll-top {
+  right: 15%;
+
+  @include vp-1024 {
+    right: 10%;
+  }
+}
