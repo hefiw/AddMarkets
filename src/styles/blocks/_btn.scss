@@ -12,7 +12,9 @@
     border: none;
     background: $gradient-orange;
     color: #fff;
-    transition: transform 100ms ease-in-out;
+    transition-property: opacity, transform;
+    transition-duration: 100ms, 200ms;
+    transition-timing-function: ease-in-out, ease-in-out;
 
     &:hover,
     &:focus-visible {
@@ -22,6 +24,10 @@
     &:active {
       transform: scale(0.9);
     }
+  }
+
+  &--small-radius {
+    border-radius: 10px;
   }
 
   &:hover,

@@ -199,3 +199,19 @@ MOBILE_DESIGNE_DW_BTN?.addEventListener("click", () => {
   MOBILE_CONTENT_DW_BTN?.classList.remove("link--active");
   MOBILE_DESIGNE_DW_BTN.classList.toggle("link--active");
 });
+
+//scroll
+
+const SCROLL_TOP_BTN: HTMLElement | null = document.querySelector(
+  "#scroll-top",
+);
+
+window.addEventListener("scroll", () => {
+  if (!SCROLL_TOP_BTN) return;
+  if (700 > Math.floor(window.scrollY)) {
+    SCROLL_TOP_BTN.style.opacity = '0';
+  }
+  else {
+    SCROLL_TOP_BTN.style.opacity = '1';
+  }
+});
