@@ -5,8 +5,38 @@
     border-bottom: #b5dfff solid 1px;
   }
 
+  &__main-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 0;
+
+    @include vp-885 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   &__main-item {
-    width: calc(100% / 4);
+    width: 100%;
+
+    svg {
+      width: 100%;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      @include vp-885 {
+        grid-row: 2/3;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      ul {
+        @include vp-885 {
+          padding-right: 10px;
+        }
+      }
+    }
   }
 
   &__social-link {
@@ -16,7 +46,7 @@
     }
 
     &:active {
-        color: $color-darkBlue;
+      color: $color-darkBlue;
     }
   }
 }

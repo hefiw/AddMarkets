@@ -1,12 +1,31 @@
 .footer {
-    background-image: url("../../assets/images/footer-bg.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+  background-image: url("../../assets/images/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
-    &__bottom {
-        background-color: #2F6192;
-        width: 100%;
-        padding: 18px;
-        bottom: -14px;
+  @include vp-885 {
+    background-position: unset;
+  }
+
+  &__bottom {
+    background-color: #2f6192;
+    width: 100%;
+    padding: 18px 0;
+    bottom: -2%;
+
+    @include vp-885 {
+        bottom: 0%;
     }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    svg {
+      max-width: 273px;
+      width: 100%;
+    }
+  }
 }
