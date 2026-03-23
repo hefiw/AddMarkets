@@ -18,8 +18,39 @@
   &__main-item {
     width: 100%;
 
+    .btn-small {
+      width: 100%;
+      max-width: 182px;
+      letter-spacing: 0.2em;
+      font-size: 7px;
+    }
+
+    li.t3,
+    span.t3 {
+      @include vp-885 {
+        font-size: 9px;
+        line-height: 13px;
+      }
+
+      svg {
+        @include vp-885 {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
     svg {
       width: 100%;
+      max-width: 240px;
+    }
+
+    &:nth-child(1) ul {
+      margin-bottom: 55px;
+
+      @include vp-885 {
+        margin-bottom: 0px;
+      }
     }
 
     &:nth-child(1),
