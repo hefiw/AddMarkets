@@ -3,19 +3,31 @@ import "./scripts/validate-form";
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 
-// new Swiper(".tarifs__swiper.swiper", {
-//   modules: [Navigation, Pagination],
-//   spaceBetween: 30,
-//   slidesPerView: 3,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
+new Swiper(".swiper", {
+  modules: [Navigation, Pagination],
+  direction: "horizontal",
+  slidesPerView: 1,
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    885: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+  },
+  spaceBetween: 10,
+
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 document.querySelectorAll<HTMLElement>('[class*="gap-"]').forEach((element) => {
   const classes = Array.from(element.classList);
