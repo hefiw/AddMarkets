@@ -40,6 +40,7 @@
 
   &__text-wrapper {
     @include vp-885 {
+      padding-top: 50px;
       flex-direction: column-reverse;
       align-items: center;
       text-align: center;
@@ -65,16 +66,24 @@
   .swiper-button-prev {
     transform: translateX(calc(-100% - 35px));
 
+    @media (max-width: 1330px) {
+      display: none;
+    }
+
     @include vp-1024 {
-      transform: translateX(calc(-100% - 20px));
+      //transform: translateX(calc(-100% - 20px));
     }
   }
 
   .swiper-button-next {
     transform: translateX(calc(100% + 35px));
 
+    @media (max-width: 1330px) {
+      display: none;
+    }
+
     @include vp-1024 {
-      transform: translateX(calc(100% + 20px));
+      //transform: translateX(calc(100% + 20px));
     }
   }
 
@@ -82,6 +91,14 @@
     bottom: 0;
     transform: translateY(calc(100% + 35px));
     --swiper-theme-color: #ff9b54;
+
+    @include vp-1024 {
+      transform: translateY(calc(100% + 30px));
+    }
+
+    @include vp-885 {
+      transform: translateY(calc(100% + 17px));
+    }
   }
 
   .swiper-slide {
@@ -91,5 +108,17 @@
     border-radius: 10px;
     // box-shadow: 0px 5px 30px 0px #57697926;
     filter: drop-shadow(0px 5px 30px 0px #57697926);
+
+    @include vp-885{
+      height: 307px;
+    }
+  }
+
+  .swiper {
+    width: 100%;
+
+    @include vp-885{
+      max-width: 230px;
+    }
   }
 }
