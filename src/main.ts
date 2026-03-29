@@ -1,7 +1,7 @@
 import "./styles/main.scss";
 import "./scripts/validate-form";
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 createSwiper("#swiper-1");
 createSwiper("#swiper-2");
@@ -10,7 +10,7 @@ createSwiper("#swiper-4");
 
 function createSwiper(id: string):Swiper {
   return new Swiper(`.swiper${id}`, {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Autoplay],
     direction: "horizontal",
     slidesPerView: 1,
     breakpoints: {
@@ -33,6 +33,9 @@ function createSwiper(id: string):Swiper {
       nextEl: `${id}~.swiper-button-next`,
       prevEl: `${id}~.swiper-button-prev`,
     },
+    autoplay: {
+      delay: 3000,
+    }
   });
 }
 
