@@ -1,21 +1,43 @@
 import "./styles/main.scss";
 import "./scripts/validate-form";
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-// new Swiper(".tarifs__swiper.swiper", {
-//   modules: [Navigation, Pagination],
-//   spaceBetween: 30,
-//   slidesPerView: 3,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
+createSwiper("#swiper-1");
+createSwiper("#swiper-2");
+createSwiper("#swiper-3");
+createSwiper("#swiper-4");
+
+function createSwiper(id: string):Swiper {
+  return new Swiper(`.swiper${id}`, {
+    modules: [Navigation, Pagination, Autoplay],
+    direction: "horizontal",
+    slidesPerView: 1,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      885: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+    },
+    spaceBetween: 10,
+
+    pagination: {
+      el: `${id}~.swiper-pagination`,
+    },
+
+    navigation: {
+      nextEl: `${id}~.swiper-button-next`,
+      prevEl: `${id}~.swiper-button-prev`,
+    },
+    autoplay: {
+      delay: 3000,
+    }
+  });
+}
 
 document.querySelectorAll<HTMLElement>('[class*="gap-"]').forEach((element) => {
   const classes = Array.from(element.classList);

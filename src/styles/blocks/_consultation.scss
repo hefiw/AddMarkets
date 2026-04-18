@@ -1,0 +1,85 @@
+.consultation {
+  background-color: #fff;
+  padding: 33px 6px;
+  margin-bottom: 67px;
+  box-shadow: 6px 7px 7px 0px #8989891a;
+  border-radius: 25px;
+  width: 975px;
+  height: 428px;
+
+  @include vp-1024 {
+    width: 864px;
+    height: 405px;
+  }
+
+  @include vp-885 {
+    width: 320px;
+    height: 443px;
+  }
+
+  &__text-wrapper {
+    margin-top: auto;
+    max-width: 421px;
+
+    @include vp-1024 {
+      max-width: 398px;
+    }
+
+    @include vp-885 {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0 0 30px;
+
+    @include vp-885 {
+      margin-bottom: 8px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 24px;
+
+    @include vp-885 {
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__img {
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+
+    @include vp-1024 {
+      width: 577px;
+      left: 21%;
+    }
+
+    @include vp-885 {
+      width: 305px;
+      top: 23%;
+      left: 46%;
+    }
+  }
+
+  &__btn {
+    width: 400px;
+
+    @include vp-1024 {
+      width: 373px;
+      border-radius: 15px;
+    }
+
+    @include vp-885 {
+      width: 254px;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+    }
+  }
+}

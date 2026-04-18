@@ -1,21 +1,45 @@
 .header {
-  padding: 32px 0;
-  z-index: 4;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  background: $gradient-blue;
+  padding: 0 0 32px;
+  min-height: 100vh;
+  margin-bottom: 20px;
+
+  @include vp-1024 {
+    margin-bottom: 48px;
+  }
 
   @include vp-885 {
-    padding: 16px 0;
+    padding: 0 0 16px;
+    margin-bottom: 16px;
+  }
 
-    &:has(.mobile-menu--open) {
-      background-color: $color-white;
+  &__wrapper {
+    max-width: 100%;
+  }
 
-      &::after {
-        content: "";
-        position: absolute;
-        height: 10px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        box-shadow: $box-shadow-mobile-menu;
+  &__header {
+    height: max-content;
+    padding-top: 32px;
+
+    @include vp-885 {
+      padding-top: 16px;
+      
+      &:has(.mobile-menu--open) {
+        background-color: $color-white;
+
+        &::after {
+          content: "";
+          z-index: 2;
+          position: absolute;
+          height: 10px;
+          bottom: -13px;
+          left: 0;
+          right: 0;
+          box-shadow: $box-shadow-mobile-menu;
+        }
       }
     }
   }

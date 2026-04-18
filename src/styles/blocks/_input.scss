@@ -1,4 +1,6 @@
 .input {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   
   &__field {
@@ -11,5 +13,10 @@
     &:focus {
       border-color: $color-orange;
     }
+  }
+
+  &__err {
+    color: red;
+    padding-top: 5px;
   }
 }
